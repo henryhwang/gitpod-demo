@@ -12,8 +12,7 @@ RUN apk add --no-cache \
         libgcc \
         gcompat \
         libstdc++\
-	neovim \
-
+	      neovim \
     # Add gitpod user
     && echo '%gitpod ALL=(ALL) NOPASSWD: ALL' > /etc/sudoers.d/gitpod \
     && addgroup -g 33333 gitpod && adduser -u 33333 -G gitpod -h /home/gitpod -s /bin/bash -D gitpod
