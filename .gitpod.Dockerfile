@@ -28,3 +28,4 @@ RUN apk add --no-cache \
     && addgroup -g 33333 gitpod && adduser -u 33333 -G gitpod -h /home/gitpod -s /bin/bash -D gitpod
 
 USER gitpod
+ENTRYPOINT [ "bash" ]
