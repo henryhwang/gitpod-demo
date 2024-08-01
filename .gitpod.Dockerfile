@@ -9,7 +9,6 @@
 
 
 FROM alpine:3.18.2
-USER root
 RUN apk add --no-cache \
         # Needed for Gitpod compatibility:
         git\
@@ -22,10 +21,6 @@ RUN apk add --no-cache \
         libgcc \
         gcompat \
         libstdc++\
-	      neovim \
     # Add gitpod user
     && echo '%gitpod ALL=(ALL) NOPASSWD: ALL' > /etc/sudoers.d/gitpod \
     && addgroup -g 33333 gitpod && adduser -u 33333 -G gitpod -h /home/gitpod -s /bin/bash -D gitpod
-
-USER gitpod
-ENTRYPOINT [ "bash" ]
