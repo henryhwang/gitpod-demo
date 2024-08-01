@@ -9,7 +9,7 @@
 
 
 FROM alpine:3.18.2
-
+USER root
 RUN apk add --no-cache \
         # Needed for Gitpod compatibility:
         git\
